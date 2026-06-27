@@ -36,6 +36,8 @@ services:
       - 3000
     volumes:
       - dockhand_data:/app/data
+    environment:
+      - DOCKER_HOST=tcp://socket-proxy:2375
     networks:
       - socket-proxy
       - pangolin_frontend
